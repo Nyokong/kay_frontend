@@ -8,6 +8,16 @@ const nextConfig = {
           },
         ];
       },
+
+    //   async redirects() {
+    //     return [
+    //       {
+    //         source: '/old-page',
+    //         destination: '/home',
+    //         permanent: true, // Use false for temporary redirects
+    //       },
+    //     ];
+    //   },
 };
 
 export default nextConfig;

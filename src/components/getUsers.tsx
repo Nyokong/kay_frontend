@@ -11,9 +11,10 @@ export default function GetUsers() {
   useEffect(() => {
         // fake a delay
         const timer = setTimeout(() => {
-            axios.get('http://127.0.0.1:8000/api/users/')
+            axios.get('http://127.0.0.1:8000/api/usrs')
             .then((response) => {
             setUsers(response.data);
+            console.log(response);
             setLoading(false);
             }).catch((error) => {
                 console.error('Error fetching data:', error);

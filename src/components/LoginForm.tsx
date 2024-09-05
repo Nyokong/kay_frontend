@@ -19,10 +19,11 @@ interface Props {
     onSubmit: string;
     e: string;
     error: any;
+    username: any;
   }
 
 const Login = ({ onSubmit }: any) => {
-    const [formData, setFormData] = useState({
+    const [formData, setFormData] = useState<Props[]>({
         username: '',
         password: '',
     });
@@ -61,7 +62,7 @@ const Login = ({ onSubmit }: any) => {
         
         // let  me try to use axios
         try{
-            const response = await axios.post('http://127.0.0.1:8000/api/user/login/', data);
+            const response = await axios.post('http://127.0.0.1:8000/api/usr/login', data);
 
             if(response.data.sessionid){
                 Cookies.set('sessionid', response.data.sessionid, { expires: 1 });
